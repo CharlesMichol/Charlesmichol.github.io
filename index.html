@@ -70,7 +70,8 @@
             margin-left: 20px;
         }
         #contacts,
-        #certificates {
+        #certificates,
+        #Hobbies {
             background-color: #1e1e50;
             color: #e0e0e0;
             padding: 20px;
@@ -80,19 +81,22 @@
             transition: transform 0.3s ease-in-out;
         }
         .contacts-header,
-        .certificates-header {
+        .certificates-header,
+        .Hobbies-header {
             color: #ffffff;
             text-align: center;
             margin-bottom: 20px;
         }
         .contacts-info,
-        .certificate-container {
+        .certificate-container,
+        .Hobbies-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
         .contacts-info p,
-        .certificate-image {
+        .certificate-image,
+        .hobby-image {
             color: #ffffff;
             margin-bottom: 5px;
             width: 200px;
@@ -101,6 +105,13 @@
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
+        }
+  
+
+        .hobby-image {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -116,6 +127,9 @@
         </div>
         <div class="header-right">
             <a href="#" onclick="toggleSection('certificates')">Certificates</a>
+        </div>
+        <div class="header-right">
+            <a href="#" onclick="toggleSection('Hobbies')">Hobbies</a>
         </div>
     </header>
     <section id="profile">
@@ -155,7 +169,7 @@
         <div class="contacts-info">
             <p>Email: CharlesMichael.Farinas@gmail.com</p>
             <p>Phone: (+63)981 015 6725</p>
-            <p><a href="https://www.tiktok.com/@2chiz?_t=8kYVBzAT8lw&_r=1" target="_blank">TikTok</a></p>
+<p><a href="https://www.tiktok.com/@2chiz?_t=8kYVBzAT8lw&_r=1" target="_blank">TikTok</a></p>
             <p><a href="https://www.facebook.com/CharlesMichaelV?mibextid=ZbWKwL" target="_blank">Facebook</a></p>
             <p><a href="https://www.instagram.com/too_chi_zzz?igsh=bmU2N3loeXFndHV2" target="_blank">Instagram</a></p>
         </div>
@@ -164,14 +178,22 @@
         <h2 class="certificates-header">Certificates</h2>
         <div class="certificate-container">
             <a href="https://ibb.co/H2r05tD">
-                <img class="certificate-image" src="https://i.ibb.co/1n93Frf/38e4871c-345e-4f41-a536-540f0d38b528.jpg" alt="Certificate 1" border=0>
+                <img class="certificate-image" src="https://i.ibb.co/1n93Frf/38e4871c-345e-4f41-a536-540f0d38b528.jpg" alt="Certificate 1" border="0">
             </a>
             <a href="https://ibb.co/s6R07Ms">
                 <img class="certificate-image" src="https://i.ibb.co/YyQzgqf/IMG-20240216-154636-020.jpg" alt="Certificate 2" border="0">
             </a>
             <a href="https://imgbb.com/">
-                <img class="certificate-image" src="https://i.ibb.co/kX1H9LX/Introduction-to-HTML-certificate.jpg" alt="Certificate 3" border=0>
+                <img class="certificate-image" src="https://i.ibb.co/kX1H9LX/Introduction-to-HTML-certificate.jpg" alt="Certificate 3" border="0">
             </a>
+        </div>
+    </section>
+    <section id="Hobbies">
+        <h2 class="Hobbies-header">Hobbies</h2>
+        <div class="Hobbies-container">
+            <img class="hobby-image" src="https://i.ibb.co/mFZ390b/images-62.jpg" alt="images-62" border="0"> 
+            <img class="hobby-image" src="https://i.ibb.co/fXMbyGY/images-65.jpg" alt="images-65" border="0"> 
+            <img class="hobby-image" src="https://i.ibb.co/WWWtybq/images-63.jpg" alt="images-63" border="0">
         </div>
     </section>
     <script>
