@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Michael D Farinas - Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e50;
+            color: #e0e0e0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #1e1e50;
+            color: white;
+            font-weight: bold;
+        }
+        header a {
+            color: #ffffff;
+        }
+        #profile {
+            background-color: #1e1e50;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+        .profile-header {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .profile-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://i.ibb.co/6HyKffR/images-50-1.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(70%);
+            z-index: -1;
+            border-radius: 0 0 10px 10px;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            background: url('https://i.ibb.co/7rg8DWP/Screenshot-20240419-215532.jpg') center/cover;
+            border-radius: 50%;
+        }
+        .profile-image-container {
+            text-align: center;
+            margin-left: 20px;
+        }
+        .profile-info {
+            color: #ffffff;
+            text-align: center;
+            margin-left: 20px;
+        }
+        #contacts,
+        #certificates {
+            background-color: #1e1e50;
+            color: #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            transition: transform 0.3s ease-in-out;
+        }
+        .contacts-header,
+        .certificates-header {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contacts-info,
+        .certificate-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .contacts-info p,
+        .certificate-image {
+            color: #ffffff;
+            margin-bottom: 5px;
+            width: 200px;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="profile-header" onclick="toggleProfile()">
+                <a href="#">Profile</a>
+            </div>
+        </div>
+        <div class="header-center">
+            <div id="contacts-button" onclick="toggleSection('contacts')">Contacts</div>
+        </div>
+        <div class="header-right">
+            <a href="#" onclick="toggleSection('certificates')">Certificates</a>
+        </div>
+    </header>
+    <section id="profile">
+        <div class="profile-header">
+            <div class="profile-background"></div>
+            <div class="profile-image-container">
+                <a href="https://ibb.co/DtW1xHs">
+                    <div class="profile-image"></div>
+                </a>
+            </div>
+            <div class="profile-info">
+                <h1>Charles Michael D Farinas</h1>
+                <p>ST CLARE STUDENT.</p>
+            </div>
+        </div>
+        <div class="my-information" >
+            <h2>My Information</h2>
+            <p></p>
+            <div class="hidden-info" id="hiddenInfoMyInfo">
+                <p>Age:16</p>
+                <p>Height:6'2 / 188cm</p>
+                <p>Nationality:Filipino</p>
+                <p>Address:blk 9 lot 7 corinthians st northcrest village bagumbong caloocan city</p>
+                <p>"Being good at lots of things helps you handle life's different challenges."</p>
+            </div>
+        </div>
+        <div class="about-me" onclick="toggleHiddenInfo('hiddenInfoAboutMe')">
+            <h2></h2>
+            <p></p>
+            <div class="hidden-info" id="hiddenInfoAboutMe">
+                
+            </div>
+        </div>
+    </section>
+    <section id="contacts">
+        <h2 class="contacts-header">Contact Information</h2>
+        <div class="contacts-info">
+            <p>Email: CharlesMichael.Farinas@gmail.com</p>
+            <p>Phone: (+63)981 015 6725</p>
+            <p><a href="https://www.tiktok.com/@2chiz?_t=8kYVBzAT8lw&_r=1" target="_blank">TikTok</a></p>
+            <p><a href="https://www.facebook.com/CharlesMichaelV?mibextid=ZbWKwL" target="_blank">Facebook</a></p>
+            <p><a href="https://www.instagram.com/too_chi_zzz?igsh=bmU2N3loeXFndHV2" target="_blank">Instagram</a></p>
+        </div>
+    </section>
+    <section id="certificates">
+        <h2 class="certificates-header">Certificates</h2>
+        <div class="certificate-container">
+            <a href="https://ibb.co/H2r05tD">
+                <img class="certificate-image" src="https://i.ibb.co/1n93Frf/38e4871c-345e-4f41-a536-540f0d38b528.jpg" alt="Certificate 1" border=0>
+            </a>
+            <a href="https://ibb.co/s6R07Ms">
+                <img class="certificate-image" src="https://i.ibb.co/YyQzgqf/IMG-20240216-154636-020.jpg" alt="Certificate 2" border="0">
+            </a>
+            <a href="https://imgbb.com/">
+                <img class="certificate-image" src="https://i.ibb.co/kX1H9LX/Introduction-to-HTML-certificate.jpg" alt="Certificate 3" border=0>
+            </a>
+        </div>
+    </section>
+    <script>
+        function toggleHiddenInfo(infoId) {
+            const hiddenInfo = document.getElementById(infoId);
+            hiddenInfo.style.display = (hiddenInfo.style.display === 'none' || hiddenInfo.style.display === '') ? 'block' : 'none';
+        }
+        function toggleSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+        function toggleProfile() {
+            const profileSection = document.getElementById('profile');
+            const contactsSection = document.getElementById('contacts');
+            const certificatesSection = document.getElementById('certificates');
+            if (profileSection.style.display === 'block') {
+                profileSection.style.display = 'block';
+            } else {
+                profileSection.style.display = 'block';
+                contactsSection.style.display = 'none';
+                certificatesSection.style.display = 'none';
+            }
+        }
+        document.querySelector('.header-left a').addEventListener('click', toggleProfile);
+        document.querySelector('.header-center #contacts-button').addEventListener('click', function () {
+            toggleSection('contacts');
+            const profileSection = document.getElementById('profile');
+            profileSection.style.display = 'none';
+        });
+        document.querySelector('.header-right a').addEventListener('click', function () {
+            toggleSection('certificates');
+            const profileSection = document.getElementById('profile');
+            profileSection.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
