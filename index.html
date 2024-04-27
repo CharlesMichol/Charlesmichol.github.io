@@ -196,44 +196,50 @@
             <img class="hobby-image" src="https://i.ibb.co/WWWtybq/images-63.jpg" alt="images-63" border="0">
         </div>
     </section>
-    <script>
-        function toggleHiddenInfo(infoId) {
-            const hiddenInfo = document.getElementById(infoId);
-            hiddenInfo.style.display = (hiddenInfo.style.display === 'none' || hiddenInfo.style.display === '') ? 'block' : 'none';
-        }
-        function toggleSection(sectionId) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
-        }
-        function toggleProfile() {
-            const profileSection = document.getElementById('profile');
-            const contactsSection = document.getElementById('contacts');
-            const certificatesSection = document.getElementById('certificates');
-            if (profileSection.style.display === 'block') {
-                profileSection.style.display = 'block';
-            } else {
-                profileSection.style.display = 'block';
-                contactsSection.style.display = 'none';
-                certificatesSection.style.display = 'none';
-            }
-        }
-        document.querySelector('.header-left a').addEventListener('click', toggleProfile);
-        document.querySelector('.header-center #contacts-button').addEventListener('click', function () {
-            toggleSection('contacts');
-            const profileSection = document.getElementById('profile');
-            profileSection.style.display = 'none';
+<script>
+    function toggleHiddenInfo(infoId) {
+        const hiddenInfo = document.getElementById(infoId);
+        hiddenInfo.style.display = (hiddenInfo.style.display === 'none' || hiddenInfo.style.display === '') ? 'block' : 'none';
+    }
+
+    function toggleSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.style.display = 'none';
         });
-        document.querySelector('.header-right a').addEventListener('click', function () {
-            toggleSection('certificates');
-            const profileSection = document.getElementById('profile');
-            profileSection.style.display = 'none';
-        });
-    </script>
+        const selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+        }
+    }
+
+    function toggleProfile() {
+        const profileSection = document.getElementById('profile');
+        const contactsSection = document.getElementById('contacts');
+        const certificatesSection = document.getElementById('certificates');
+        const hobbiesSection = document.getElementById('Hobbies'); // Add this line
+        if (profileSection.style.display === 'block') {
+            profileSection.style.display = 'block';
+            hobbiesSection.style.display = 'none'; // Add this line
+        } else {
+            profileSection.style.display = 'block';
+            contactsSection.style.display = 'none';
+            certificatesSection.style.display = 'none';
+            hobbiesSection.style.display = 'none'; // Add this line
+        }
+    }
+
+    document.querySelector('.header-left a').addEventListener('click', toggleProfile);
+    document.querySelector('.header-center #contacts-button').addEventListener('click', function () {
+        toggleSection('contacts');
+        const profileSection = document.getElementById('profile');
+        profileSection.style.display = 'none';
+    });
+    document.querySelector('.header-right a').addEventListener('click', function () {
+        toggleSection('certificates');
+        const profileSection = document.getElementById('profile');
+        profileSection.style.display = 'none';
+    });
+</script>
 </body>
 </html>
